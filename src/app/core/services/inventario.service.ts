@@ -19,8 +19,8 @@ export interface MovimientoRequest {
 })
 export class InventarioService {
   private http = inject(HttpClient);
-  // URL por defecto del Web API
-  private apiUrl = 'https://localhost:5001/api/productos';
+  // URL por defecto del Web API (cambiado a 5201)
+  private apiUrl = 'https://localhost:5201/api/productos';
 
   getInventario(): Observable<Producto[]> {
     return this.http.get<Producto[]>(`${this.apiUrl}/inventario`);

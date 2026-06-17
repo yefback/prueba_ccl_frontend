@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './features/auth/login/login.component';
+import { InventarioComponent } from './features/inventario/inventario.component';
 import { authGuard } from './core/guards/auth.guard';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  // Las rutas protegidas se agregarán en la Etapa 6
+  { path: 'inventario', component: InventarioComponent, canActivate: [authGuard] },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'login' }
 ];

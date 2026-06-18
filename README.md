@@ -1,59 +1,28 @@
-# Frontend
+# Prueba Técnica CCL - Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.27.
+Este proyecto es la solución de la interfaz de usuario para la prueba técnica, construido con **Angular 19**. Implementa un flujo de login seguro y una pantalla de inventario reactiva.
 
-## Development server
+## Requisitos Previos
 
-To start a local development server, run:
+- [Node.js](https://nodejs.org/) (versión recomendada 18+ o 20+).
+- Angular CLI instalado globalmente (`npm install -g @angular/cli`).
 
-```bash
-ng serve
-```
+## Ejecución del Proyecto
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+1. Abre tu terminal en esta carpeta.
+2. Instala las dependencias del proyecto de Node.js:
+   ```bash
+   npm install
+   ```
+3. Ejecuta el servidor de desarrollo de Angular:
+   ```bash
+   npm start
+   ```
+   *El frontend iniciará en http://localhost:4200 y se recargará automáticamente si haces cambios en el código.*
 
-## Code scaffolding
+## Notas Importantes
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Asegúrate de que el servidor Backend (.NET Core) esté corriendo simultáneamente en el puerto `5200` para que el Frontend pueda consumir sus Endpoints.
+- Las credenciales por defecto para iniciar sesión:
+  - **Usuario:** admin
+  - **Contraseña:** admin123

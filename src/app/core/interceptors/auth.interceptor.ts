@@ -6,7 +6,8 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const authService = inject(AuthService);
   const token = authService.getToken();
 
-  if (token) {
+  // Si hay token y la ruta no es el login, lo adjuntamos
+  if (token && !req.url.includes('/login')) {
     const authReq = req.clone({
       setHeaders: {
         Authorization: `Bearer ${token}`

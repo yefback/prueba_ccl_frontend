@@ -17,8 +17,8 @@ export interface LoginResponse {
 })
 export class AuthService {
   private http = inject(HttpClient);
-  // URL por defecto para el entorno local .NET Core (generalmente puertos 5000/5001, cambiado a 5201)
-  private apiUrl = 'https://localhost:5201/api/auth'; 
+  // URL usando HTTP para evitar bloqueos del navegador por certificados SSL no confiables
+  private apiUrl = 'http://localhost:5200/api/auth'; 
   
   private tokenKey = 'jwt_token';
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(this.hasToken());
